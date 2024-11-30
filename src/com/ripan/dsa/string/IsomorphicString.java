@@ -1,6 +1,6 @@
 package com.ripan.dsa.string;
 
-// leetcode 205
+// leetcode-205
 
 import java.util.HashMap;
 
