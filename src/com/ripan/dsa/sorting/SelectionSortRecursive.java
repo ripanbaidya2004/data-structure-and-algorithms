@@ -6,7 +6,6 @@ import java.util.Arrays;
 public class SelectionSortRecursive {
 
     private static void recursiveSelectionSort(int[] arr,int i, int n) {
-
         if(i <= n){
             int min = i;
 
@@ -15,7 +14,6 @@ public class SelectionSortRecursive {
                     min = j;
                 }
             }
-
             int temp = arr[i];
             arr[i] = arr[min];
             arr[min] = temp;
