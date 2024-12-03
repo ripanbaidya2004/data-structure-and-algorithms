@@ -1,39 +1,44 @@
 package com.ripan.dsa.array;
 
-import java.util.Arrays;
-
-// move all the zeros to the end of the array
-// leetcode 283
-
+/**
+ * move all the zeros to the end of the array
+ * leetcode 283
+ * ar = {7, 1, 0, 3, 0, 0, 2}; -> 7, 1, 3, 2, 0, 0, 0
+ */
 public class MoveZerosToEnd {
 
-    private static void moveZerosBetterSolution(int[] arr){
-        int trackZero = -1;
-        for(int i = 0 ;i <= arr.length-1 ; i ++){
+    // use two pointers to solve this problem.
+    private int[] moveZeros(int[] arr){
+        // j pointer, which will track zero
+        int j = -1;
+
+        // find the position of the first 0'th element
+        for(int i = 0; i < arr.length; i ++){
             if(arr[i] == 0){
-                trackZero = i ;
+                j = i;
                 break;
             }
-        } // O(x)
+        }
 
-        for(int j = trackZero+1 ; j <= arr.length-1; j ++){
-            if(arr[j] != 0){
-                int temp = arr[j];
-                arr[j] = arr[trackZero];
-                arr[trackZero] = temp;
-                trackZero ++;
+        // if there is no zero
+        if(j == -1) return arr;
+
+        // move the pointer i and j, and move them accordingly
+        for(int i = j+1; i < arr.length; i ++){
+            if(arr[i] != 0) {
+                // swap arr[i] & arr[j].
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                j ++;
             }
-        }// O(n - x)
-
-        // time : O(x) + O(n-x) ==> O(n), space = O(1)
+        }
+        return arr;
     }
 
     public static void main(String[] args) {
 
         int[] arr = {7, 1, 0, 3, 0, 0, 2}; // 7, 1, 3, 2, 0, 0, 0
 
-        System.out.println("Original Array :"+ Arrays.toString(arr));
-        moveZerosBetterSolution(arr);
-        System.out.println("After moving zeros :"+ Arrays.toString(arr));
     }
 }
