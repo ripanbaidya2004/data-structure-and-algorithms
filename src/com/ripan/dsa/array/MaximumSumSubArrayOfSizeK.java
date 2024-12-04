@@ -28,6 +28,7 @@ public class MaximumSumSubArrayOfSizeK {
             sum -= arr[i-k]; // reducing the sum from the first index of the array in each iteration
             maxSum = Math.max(maxSum, sum); // update the maxSum
         }
+        // time: O(n), space: O(1)
         return maxSum;
     }
     public static void main(String[] args) {
