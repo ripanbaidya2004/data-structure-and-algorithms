@@ -175,6 +175,17 @@ class SinglyLinkedList {
     public int length() {
         return len;
     }
+    /**
+     * public int getLength(Node head) {
+     *         int len = 0;
+     *         Node cur = head;
+     *         while(cur!= null){
+     *             len ++;
+     *             cur = cur.next;
+     *         }
+     *         return len;
+     *     }
+     */
 }
 
 /**
