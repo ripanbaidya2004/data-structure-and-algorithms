@@ -1,6 +1,6 @@
 package com.ripan.dsa.array;
 
-// leetcode 1925
+// leetcode 1295
 public class FindNumbersWithEvenNumberOfDigits {
 
     public static boolean isEvenNumberDigits(int num){
@@ -26,7 +26,7 @@ public class FindNumbersWithEvenNumberOfDigits {
     }
 
     public static void main(String[] args) {
-        int[] nums = {12, 345, 2, 6, 7896}; // Output: 2
+        int[] nums = {12, 345, 2, 6, 7896}; // Output: 2 , 12 & 7896 has even numbers of digits.
 
         int result = findNumbers(nums);
         System.out.println(result);
