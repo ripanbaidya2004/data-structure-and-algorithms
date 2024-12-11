@@ -7,7 +7,6 @@ import java.util.Arrays;
  * Rearrange array elements, so that element with positive sign appears before element with negative sign
  * Input: nums = [3,1,-2,-5,2,-4]
  * Output: [3,-2,1,-5,2,-4]
- *
  */
 public class RearrangeArrayElementsBySign {
     public static int[] rearrangeArray(int[] nums) {
