@@ -57,13 +57,14 @@ public class FindIntersection {
          */
         int i = 0, j = 0, n1 = nums1.length, n2 = nums2.length;
         int[] ans = new int[Math.min(n1, n2)];
+        int k = 0;
         while (i < n1 && j < n2) {
             if (nums1[i] < nums2[j]) {
                 i++;
             } else if (nums1[i] > nums2[j]) {
                 j++;
             } else {
-                ans[ans.length - 1] = nums1[i];
+                ans[k++] = nums1[i];
                 i++;
                 j++;
             }
