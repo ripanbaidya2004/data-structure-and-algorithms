@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * Inparr = [4, 7, 1, 0]
+ * Input : arr = [4, 7, 1, 0]
  * Output = 7 1 0
  * Explanation: Rightmost element is always a leader. 7 and 1 are greater than the elements in their right side.
  */
